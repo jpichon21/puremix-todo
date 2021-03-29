@@ -18,7 +18,8 @@ class CreateItemsTable extends Migration
             $table->string('title');
             $table->string('message');
             $table->date('due_date');
-            $table->boolean('completed');
+            $table->boolean('completed')->default(false);
+            $table->timestamps('completed_at');
             $table->timestamps();
         });
     }
